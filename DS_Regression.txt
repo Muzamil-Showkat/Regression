@@ -1,0 +1,129 @@
+
+Dataset -- 2/3 bhk apartment prices in 5 areas of Bangalore for the years 2020 & 2019.
+
+problem statement -- to build a predictive machine learning model that could
+predict the house prices in Bangalore.
+
+5 areas - a,b,c,d,e
+builders name - b1,b2,b3 ....b6 
+
+Columns:
+Location, Builder's Name, Sq.Ft, No. Of Bedrooms, No. Of Bathrooms, Balcony,
+Car Parking facility,  Club House , House Price 
+
+Factors / features / independent variables /inputs/attributes
+ -- all the columns except house price
+
+
+Outcome / target / Dependent variable / label -- House Price 
+=====================================================================================
+
+Supervised Learning --> Classification & Regression
+
+Regression: 
+
+We opt for the regression supervised ML technique when the target variable
+is of continuous numeric type.
+
+Eg: House Price -- 20 lakh rupees , 33,33,500 rupees as well, 3 crore rupees 
+                   as well
+
+Eg : Weather forecast , stock prices, employee salary , health vitals,
+     product prices etc., 
+
+Classification :
+
+Supervised ML approach . when the target variable(y) is of categorical type,
+then you would choose classification. 
+
+Ex : Tall/Short/Medium , Sick/healthy , Grades of a student(A/B/C/D/E/F) , blood group
+
+======================================================================================
+Regression:
+1. Linear Regression --> These algorithms are used when the spread of dataset
+is a linear one.
+
+2.Non-linear Regression --> These algorithms are used when the spread of dataset
+is a non-linear one.
+
+Linear Regression:
+
+1. Simple linear regression 
+
+2. Multiple linear regression 
+
+
+Regression -> statistical technique wherein the strength of reltionship between
+              different variables ( between the target and the features) is
+              figured out.
+
+1. Simple linear regression 
+
+    y = mx +c  , y--> house price , x--> sq.ft of the house 
+
+y --> target variable , m --> regression co-efficient , c --> intercept 
+
+1 target variable  & only 1 feature, the model that you build for this
+data is called a simple linear regression model.
+=============================================================================
+
+2. Multiple Linear Regression 
+
+1 target variable and when you have more than 1 feature ==> MLR
+
+    y = b1x1 + b2x2 + b3x3 + b4x4 + ....... + bnxn + c
+
+
+y -- > target variable , x1, x2, x3, x4 ..xn --> the features present in the
+       dataset, c - intercept , b1, b2 , b3 ...bn --> regression co-efficients
+       where b1 -- represents the strength of relationship between x1 & y
+       where b2 -- represents the strength of relationship between x2 & y
+
+
+=============================================================================
+
+Steps followed in building a machine learning model:
+
+Once EDA(Exploratory Data Analysis) is done, 
+
+1. Identify the target variable in your dataset.
+
+2. Separate the features(X) and the target variable(y)
+
+3. Separate our dataset into train and test datasets --split ratio -- 75 :25,
+80 :20 , 70 :30 , 60 :40 
+
+4. Building the ML model :
+   (i)  Instantiate the estimator object 
+
+        model = LinearRegression() , the "model" variable is called estimator object.
+
+   (ii) Build our model with training dataset
+
+   (iii) Validate our model using the testing dataset with the help of 
+         suitable evaluation metrics
+  
+=============================================================================
+Evaluate a regression model :
+
+RMSE - root mean squared error -- can range from 0 to infinity.
+
+How is the error in prediction calculated?
+
+(i) actual house price value = 50 lakh rupees, model predicted value = 60 lakh rupees
+(ii) actual house price value = 90 lakh rupees , model predicted value = 80 lakh rupees
+
+Error = actual value - predicted value
+
+case (i) - error = 50 - 60 = -10
+case (ii) - error= 90 - 80 = 10
+
+Average error value = -10 + 10 / 2 = 0 
+
+square error & then take average & then the root  = 100 + 100 /2 = 100 =>sq.rt = 10 units
+
+average error = 10 units --> RMSE value
+
+R2_score - how well our model fit the dataset-- ranges from 0 to 1. 
+
+==============================================================================
